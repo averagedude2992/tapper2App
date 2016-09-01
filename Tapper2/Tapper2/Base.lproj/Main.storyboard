@@ -37,14 +37,17 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5gj-fT-VSG">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5gj-fT-VSG" userLabel="PlayBtn">
                                 <rect key="frame" x="122" y="405" width="356" height="175"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="5gj-fT-VSG" secondAttribute="height" multiplier="356:175" id="bPD-0V-ZXd"/>
                                 </constraints>
                                 <state key="normal" image="playbtn"/>
+                                <connections>
+                                    <action selector="onPlayBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FTO-db-kuM"/>
+                                </connections>
                             </button>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="1000 Taps" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zl0-DC-efz">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="1000 Taps" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zl0-DC-efz" userLabel="1000 Taps Label">
                                 <rect key="frame" x="122" y="283" width="356" height="89"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="356" id="bu9-CM-JQ9"/>
@@ -54,13 +57,16 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p8w-Wz-87T">
-                                <rect key="frame" x="209" y="79" width="183" height="183"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p8w-Wz-87T" userLabel="CoinBtn">
+                                <rect key="frame" x="209" y="78" width="183" height="183"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="183" id="z2u-Ny-VY7"/>
                                     <constraint firstAttribute="height" constant="183" id="zjV-aS-gPU"/>
                                 </constraints>
                                 <state key="normal" image="coin"/>
+                                <connections>
+                                    <action selector="onCoinBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="n2F-xi-A1v"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -82,6 +88,13 @@
                             <constraint firstItem="5gj-fT-VSG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="xot-si-bZ5"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="coinBtn" destination="p8w-Wz-87T" id="37Q-VH-t1R"/>
+                        <outlet property="howManyTxtField" destination="cc4-ET-JhR" id="ysl-XW-BeO"/>
+                        <outlet property="playBtn" destination="5gj-fT-VSG" id="eFZ-xQ-L5w"/>
+                        <outlet property="tapperLogo" destination="QSt-Dl-LNe" id="aeY-e6-XYE"/>
+                        <outlet property="tapsLbl" destination="zl0-DC-efz" id="Pkg-ul-3Cf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
