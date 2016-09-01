@@ -68,4 +68,36 @@ class ViewController: UIViewController {
         maxTaps = 0
         howManyTxtField.text = ""
         }
+    
+    
+    
+    // BEGIN stachExchange code (cut/paste) to make the keyboard dissappear when the screen is tapped https://stackoverflow.com/questions/24126678/close-ios-keyboard-by-touching-anywhere-using-swift
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        //Looks for single or multiple taps.
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+    }
+    
+    //Calls this function when the tap is recognized.
+    func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+        
+    // END stachExchange code
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     }
